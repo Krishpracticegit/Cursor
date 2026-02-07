@@ -1,7 +1,8 @@
 :root{
     --color-black: #000;
     --color-white: #fff;
-
+    --color-theme-fg-10: 
+color-mix(in oklab, var(--color-theme-fg) 10%, transparent);
     --color-red-500: lab(55.4814% 75.0732 48.8528);
     --color-red-600: lab(48.4493% 77.4328 61.5452);
     --color-green-50: lab(98.1563% -5.60117 2.75915);
@@ -22,8 +23,8 @@
     --color-gray-700: lab(27.1134% -.956401 -12.3224);
     --color-gray-800: lab(16.1051% -1.18239 -11.7533);
     --color-gray-900: lab(8.11897% .811279 -12.254);
-    --color-theme-border-02-5: 
-color-mix(in oklab, var(--color-theme-fg) 20%, transparent);
+    --color-theme-border-02-5: color-mix(in oklab, var(--color-theme-fg) 20%, transparent);
+    --color-theme-border-01: color-mix(in oklab, var(--color-theme-fg) 2.5%, transparent);    
     --color-theme-bg: #14120b;
     --color-theme-fg: #edecec;
     --color-theme-fg-02: #d7d6d5;
@@ -109,12 +110,12 @@ body{
     min-height: 100vh;
 }
 header{
-    padding-left: 5.3vw;
-    padding-right: 5.3vw;
+    padding-left: 5.6vw;
+    padding-right: 5.6vw;
     z-index: 1000;
 }
 main{
-    margin: 0 5.3vw;
+    margin: 0 5.6vw;
 }
 .btn-ghost {
     border: 1px solid var(--color-theme-border-02-5);
@@ -184,10 +185,10 @@ section{
     flex-direction: column;
     gap: 20px;
     align-items: flex-start;
-    margin: 60px 0;
 }
 main{
-    padding: 40px 0;
+    padding-top: 112px;
+    padding-bottom: 156.8px;
 }
 h2{
     font-size: 1.625rem;
@@ -198,13 +199,16 @@ h1{
     line-height: 1.2;
     font-weight: 100;
 }
-button.btn .big{
-    background-color: pink;
-    font-size: 1.625rem;
+button.btn.big{
+
+    font-size: 1rem;
 }
 .all-brand-cov p{
     width: 100%;
     text-align: center;
+}
+.all-brand-cov{
+    padding-bottom: 33.6px;
 }
 .all-brand{
     display: flex;
@@ -232,6 +236,7 @@ button.btn .big{
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 56px;
 }
 .grid{
     display: grid;
@@ -323,6 +328,7 @@ p.score{
 .join-us{
     background-color: var(--color-theme-card-hex);
     width: 100%;
+    margin-top: 67.2px;
     padding: 17.5px;
     padding-top: 15.6px;
     border-radius: 4px;
@@ -348,8 +354,16 @@ p.score{
     grid-column-end: 9;
 }
 footer>section{
-    padding-left: 5vw;
-    padding-right: 5vw;
+    padding-left: 5.6vw;
+    padding-right: 5.6vw;
+}
+.cov{
+    padding-top: 67.2px;
+    padding-bottom: 67.2px;
+}
+.cov-ex{
+    padding-top: 112px;
+    padding-bottom: 112px;
 }
 .highlights{
     *{
@@ -357,9 +371,9 @@ footer>section{
         font-weight: 100;
     }
     background-color: var(--color-theme-card-hex);
+    margin-top: 89.6px;
     padding-top: 67.2px;
-    padding-bottom: 67.2px;
-    display: flex;
+    padding-bottom: 89.6px;
     flex-direction: row;
     >div{
         width: 50%;
@@ -385,4 +399,81 @@ footer>section{
 }
 .real-highlights:hover{
     background-color: var(--color-theme-card-03-hex);
+}
+.last{
+    font-family: var(--font-sans);
+    font-size: .875rem;
+    line-height: 1;
+    font-weight: 400;
+    letter-spacing: .01em;
+    background-color: var(--color-theme-card-hex);
+    margin-bottom: 0;
+    padding-top: 67.2px;;
+    padding-bottom: 30px;
+}
+ul{
+    list-style: none;
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 9.12px;
+}
+li{
+    cursor: pointer;
+}
+li:first-child{
+    color: var(--color-theme-text-sec);
+}
+.list{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 100.2px;
+}
+.base{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+.btn-secondary {
+    background-color: var(--color-theme-card-03-hex);
+    border: 1px solid var(--color-theme-border-01);
+    color: var(--color-theme-text-sec);
+    gap: 5px;
+    cursor: pointer;
+    padding: .4rem .75rem .42rem;
+}
+div.btn>span{
+    padding: .4rem .75rem .42rem;
+    border-radius: 3.40282e38px;
+}
+div.btn>span:hover{
+    background-color: var(--color-theme-fg-10);
+    color: var(--color-theme-fg);
+}
+.icon-glyph-09{
+    font-family: var(--font-sans);
+    font-feature-settings: "ss09";
+}
+.download-cursor{
+
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    padding: 136px 20px;
+    h1{
+        font-size: 4.5rem;
+        line-height: 1.1;
+        letter-spacing: -0.03rem;
+        margin-bottom: 22.4px;
+    }
+    .btn{
+        font-size: 1rem;
+    }
+}
+.btn-cov{
+    display:flex;
+    gap: 20px;
 }
