@@ -1,0 +1,1 @@
+Only the animated images from the original site were recreated using screenshots. All other elements were built from scratch.
